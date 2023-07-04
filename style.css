@@ -328,3 +328,21 @@ footer {
   height: 5vh;
   color: #444;
 }
+
+
+.contact-p {
+  margin-left: 1em;
+  margin-top: 5em;
+  color: #444;
+}
+
+#contact-h2{
+  text-align: center;
+  color: rgba(226, 210, 250, 98);
+}
+
+form {
+  margin-left: 30em;
+  margin-top: 5em;
+  color: rgba(226, 210, 250, 98)
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="site">
+        <nav>
+  
+           <ul>
+           <li> <a href="index.html"> Home </a></li>
+           <li> <a href="artgallery.html">Art Gallery</a></li>
+           <li> <a href="about.html"> About </a></li>
+           <li><a href="contact.html">Contact</a></li>
+           </ul>
+
+        </nav>
+      </section>
+
+
+
+      <div class="contact-p">
+
+        <h2 id="contact-h2">Bee Kind</h2>
+        <p>At Bee Kind, we are dedicated to saving the bees and protecting their vital role in our ecosystem. Bees play a crucial role in pollination, which is essential for the growth of plants, the production of food, and the overall biodiversity of our planet. 
+            However, bees are facing numerous challenges such as habitat loss, pesticide use, and climate change. Our organization is committed to raising awareness about these issues and implementing sustainable solutions to ensure the survival of bees. By working together, we can make a positive impact on the future of our environment and the well-being of these remarkable pollinators. Join us in our mission to save the bees and create a more sustainable world for future generations.</p>
+    
+      </div>
+      
+
+
+      <form>
+        <div class="emailBox">
+          <label for="emailAddress">Your email address</label><br />
+          <input
+            id="emailAddress"
+            type="email"
+            size="64"
+            maxlength="64"
+            required
+            placeholder="username@gmail.com"
+            pattern=".+@gmail\.com"
+            title="Contact Us" />
+        </div>
+      
+        <div class="messageBox">
+          <label for="message">Request</label><br />
+          <textarea
+            id="message"
+            cols="80"
+            rows="8"
+            required
+            placeholder="Bee a part of solution"></textarea>
+        </div>
+        <input type="submit" value="Send Request" />
+      </form>
+      
+      
+
+
+      <script>
+        window.addEventListener("load", () => {
+            function sendData() {
+              const XHR = new XMLHttpRequest();
+          
+              // Bind the FormData object and the form element
+              const FD = new FormData(form);
+          
+              // Define what happens on successful data submission
+              XHR.addEventListener("load", (event) => {
+                alert(event.target.responseText);
+              });
+          
+              // Define what happens in case of error
+              XHR.addEventListener("error", (event) => {
+                alert("Oops! Something went wrong.");
+              });
+          
+              // Set up our request
+              XHR.open("POST", "https://example.com/cors.php");
+          
+              // The data sent is what the user provided in the form
+              XHR.send(FD);
+            }
+          
+            // Get the form element
+            const form = document.getElementById("myForm");
+          
+            // Add 'submit' event handler
+            form.addEventListener("submit", (event) => {
+              event.preventDefault();
+          
+              sendData();
+            });
+          });
+          
+
+      </script>
+      
+
+
+
+</body>
+</html>
